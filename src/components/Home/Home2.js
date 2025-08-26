@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/me.png";
 import Tilt from "react-parallax-tilt";
@@ -8,10 +7,11 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { forwardRef } from "react";
 
-function Home2() {
+const Home2 = forwardRef((props, ref) => {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container ref={ref} fluid className="home-about-section" id="about">
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
@@ -110,5 +110,6 @@ function Home2() {
       </Container>
     </Container>
   );
-}
+});
+
 export default Home2;
