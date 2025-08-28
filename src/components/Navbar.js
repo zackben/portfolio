@@ -12,10 +12,10 @@ import {
 import { CgGitFork } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import logo from "../Assets/signature.png";
-
 import { CgFileDocument } from "react-icons/cg";
+import DarkModeToggle from "./Dark";
 
-function NavBar() {
+function NavBar({ darkMode, setDarkMode }) {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -100,6 +100,10 @@ function NavBar() {
                 <CgGitFork style={{ fontSize: "1.2em" }} />
                 <AiFillStar style={{ fontSize: "1.1em" }} />
               </Button>
+            </Nav.Item>
+
+            <Nav.Item className="fork-btn">
+              <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

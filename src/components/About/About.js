@@ -7,9 +7,12 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 
-function About() {
+function About({ darkMode }) {
   return (
-    <Container fluid className="about-section">
+    <Container
+      fluid
+      className={`about-section${darkMode ? " dark-mode" : " light-mode"}`}
+    >
       <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>

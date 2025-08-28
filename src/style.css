@@ -259,6 +259,19 @@ button:focus {
   padding-top: 30px !important;
 }
 
+.home-section.light-mode {
+  background-image: var(--section-background-color) !important;
+  color: #181a27 !important;
+}
+
+.home-section.light-mode .home-content,
+.home-section.light-mode .heading,
+.home-section.light-mode .heading-name,
+.home-section.light-mode .main-name,
+.home-section.light-mode .Typewriter__wrapper {
+  color: #181a27 !important;
+}
+
 .home-content {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
@@ -738,3 +751,26 @@ button:focus {
   display: none !important;
 
 }
+
+/* Thème clair global */
+body.light-mode {
+  background: #f5fbf6 !important;
+  color: #0d0d0e !important;
+}
+
+/* Home2 (about) section light mode */
+.home-about-section.light-mode {
+  background: #f5fbf6 !important;
+  color: #181a27 !important;
+  background-image: var(--section-background-color) !important;
+  
+}
+
+.home-about-section.light-mode,
+.home-about-section.light-mode .home-about-description,
+.home-about-section.light-mode .home-about-body,
+.home-about-section.light-mode .home-about-social {
+  color: #181a27 !important;
+}
+
+

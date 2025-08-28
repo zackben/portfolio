@@ -9,9 +9,14 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import { forwardRef } from "react";
 
-const Home2 = forwardRef((props, ref) => {
+const Home2 = forwardRef(({ darkMode }, ref) => {
   return (
-    <Container ref={ref} fluid className="home-about-section" id="about">
+    <Container
+      ref={ref}
+      fluid
+      className={`home-about-section${darkMode ? " dark-mode" : " light-mode"}`}
+      id="about"
+    >
       <Container>
         <Row>
           <Col md={8} className="home-about-description">

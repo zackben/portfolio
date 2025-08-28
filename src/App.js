@@ -20,6 +20,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -29,20 +30,30 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    document.body.className = darkMode ? "" : "light-mode";
+  }, [darkMode]);
+
   return (
     <Router>
       <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
+      <div
+        className={`App${darkMode ? " dark-mode" : ""}`}
+        id={load ? "no-scroll" : "scroll"}
+      >
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route
+            path="/"
+            element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}
+          />
+          <Route path="/project" element={<Projects darkMode={darkMode} />} />
+          <Route path="/about" element={<About darkMode={darkMode} />} />
+          <Route path="/resume" element={<Resume darkMode={darkMode} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
+        <Footer darkMode={darkMode} />
       </div>
     </Router>
   );

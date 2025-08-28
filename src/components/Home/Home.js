@@ -4,7 +4,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import { useRef } from "react";
 
-function Home() {
+function Home({ darkMode }) {
   const targetRef = useRef(null);
 
   const handleScroll = () => {
@@ -12,7 +12,11 @@ function Home() {
   };
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <Container
+        fluid
+        className={`home-section${darkMode ? " dark-mode" : " light-mode"}`}
+        id="home"
+      >
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
@@ -75,7 +79,6 @@ function Home() {
       >
         Scroll Down
       </span>
-
       <style>
         {`
       @keyframes bounce {
@@ -91,8 +94,7 @@ function Home() {
       }
     `}
       </style>
-
-      <Home2 ref={targetRef} />
+      <Home2 ref={targetRef} darkMode={darkMode} />{" "}
     </section>
   );
 }
