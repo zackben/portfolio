@@ -29,7 +29,7 @@ function Projects() {
               imgPath={bp}
               isBlog={false}
               title="jedeviensclient"
-              description="A journey allows new clients to open a bank account entirely online through the Pocket Bank app. This digital process offers exclusive packages available only on the app, making it easier to access banking services without the need to visit a branch.e"
+              description="A journey allows new clients to open a bank account entirely online through the Pocket Bank app."
             />
           </Col>
 
@@ -38,7 +38,7 @@ function Projects() {
               imgPath={bp}
               isBlog={false}
               title="Ebanking(Cash Management)"
-              description=" Development of a web-based eBanking interface for cash management, enabling financial transactions such as single and multiple transfers, account-to-account transfers, and operations for both individuals and businesses. Integration of customer journeys for managing card requests and banking services. Close collaboration with business and back-end teams to ensure fluidity, security, and compliance with banking standards."
+              description="Development of a web-based eBanking interface for cash management, enabling financial transactions such as single and multiple transfers, account-to-account transfers, and operations for both individuals and businesses. "
             />
           </Col>
 
@@ -56,7 +56,7 @@ function Projects() {
               imgPath={ocp}
               isBlog={false}
               title="OCP Medical Coverage Application "
-              description="Participation in the development and evolution of an application dedicated to OCP group employees for managing their medical coverage provided by Saham. Integration of specific user journeys: viewing benefits, tracking reimbursements, submitting coverage requests, etc. Improvement of the user interface, bug fixes, and optimization of accessibility to ensure a smooth and intuitive experience."
+              description="application dedicated to OCP group employees for managing their medical coverage provided by Saham."
             />
           </Col>
 
@@ -74,7 +74,7 @@ function Projects() {
               imgPath={eq}
               isBlog={false}
               title="Espace connecté EQDOM"
-              description="Development of a web application that improves the credit processing time of files through an automated and industrialized workflow, while providing the client with their score in real time within an interactive and digital framework."
+              description="application that improves the credit processing time of files through an automated and industrialized workflow, while providing the client with their score in real time "
             />
           </Col>
         </Row>
