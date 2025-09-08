@@ -10,12 +10,13 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { CgGitFork } from "react-icons/cg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../Assets/signature.png";
 import { CgFileDocument } from "react-icons/cg";
 import DarkModeToggle from "./Dark";
 
 function NavBar({ darkMode, setDarkMode }) {
+  const location = useLocation();
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -53,7 +54,12 @@ function NavBar({ darkMode, setDarkMode }) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                as={Link}
+                to="/"
+                onClick={() => updateExpanded(false)}
+                className={location.pathname === "/" ? "active-link" : ""}
+              >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
@@ -63,6 +69,7 @@ function NavBar({ darkMode, setDarkMode }) {
                 as={Link}
                 to="/about"
                 onClick={() => updateExpanded(false)}
+                className={location.pathname === "/about" ? "active-link" : ""}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
@@ -73,6 +80,9 @@ function NavBar({ darkMode, setDarkMode }) {
                 as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
+                className={
+                  location.pathname === "/project" ? "active-link" : ""
+                }
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
@@ -86,6 +96,7 @@ function NavBar({ darkMode, setDarkMode }) {
                 as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
+                className={location.pathname === "/resume" ? "active-link" : ""}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>

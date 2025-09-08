@@ -65,7 +65,7 @@ function Projects() {
               imgPath={saham}
               isBlog={false}
               title="Sanlam Mobile App"
-              description="Worked on the Saham mobile application to integrate new user journeys related to insurance services. Focused on bug fixing, performance optimization, and continuous UI/UX improvements. Ensured a smooth and consistent user experience across both iOS and Android platforms."
+              description="Worked on the Saham mobile application to integrate new user journeys related to insurance services.Ensured a smooth and consistent user experience across both iOS and Android platforms."
             />
           </Col>
 
